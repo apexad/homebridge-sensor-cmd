@@ -1,0 +1,41 @@
+{
+  "name": "homebridge-sensor-cmd",
+  "version": "1.0.2",
+  "description": "Homebridge plugin that creates a contact sensor with state determined by a command-line/shell command in only 25 lines of code",
+  "main": "dist/accessory.js",
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "build": "rimraf ./dist && tsc",
+    "prepublishOnly": "npm run build",
+    "postpublish": "npm run clean",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "Alex 'apexad' Martin"
+  },
+  "engines": {
+    "node": ">=10.17.0",
+    "homebridge": ">=1.0.0"
+  },
+  "keywords": [
+    "homebridge-plugin"
+  ],
+  "license": "MIT",
+  "files": [
+    "LICENSE",
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/apexad/homebridge-sensor-cmd"
+  },
+  "bugs": {
+    "url": "http://github.com/apexad/homebridge-sensor-cmd/issues"
+  },
+  "devDependencies": {
+    "@types/node": "10.17.19",
+    "homebridge": "^1.1.6",
+    "rimraf": "^3.0.2",
+    "typescript": "^3.9.7"
+  }
+}

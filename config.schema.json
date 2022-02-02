@@ -1,0 +1,33 @@
+{
+    "pluginAlias": "SensorCmd",
+    "pluginType": "accessory",
+    "singular": false,
+    "schema": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string",
+          "required": true
+        },
+        "type": {
+            "title": "Sensor Type",
+            "type": "string",
+            "default": "Contact",
+            "oneOf": [
+              { "title": "Contact", "enum": ["contact"] },
+              { "title": "Motion", "enum": ["motion"] },
+              { "title": "Occupancy", "enum": ["occupancy"] }
+            ],
+            "required": true
+          },
+          "command": {
+            "title": "Command",
+            "type": "string",
+            "required": true
+          }
+      }
+    },
+    "form": null,
+    "display": null
+  }
